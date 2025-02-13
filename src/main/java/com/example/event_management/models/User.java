@@ -19,6 +19,8 @@ import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 
+
+
 @Entity
 @Table(name = "users")
 @Getter
@@ -83,5 +85,10 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
     }
 }
